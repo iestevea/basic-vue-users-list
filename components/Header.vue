@@ -46,5 +46,6 @@ export default Vue.extend({
   font-size: 18px;
   padding-right: 1rem;
   color: white;
+  cursor: pointer;
 }
 </style>

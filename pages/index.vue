@@ -48,7 +48,7 @@ export default Vue.extend({
       }
     },
     getStorageOrg() {
-      return process.browser ? localStorage.getItem("org") : "";
+      return process.browser && localStorage.getItem("org") ? localStorage.getItem("org") : "lemoncode";
     },
     async filterEmployees(org: string) {
       this.organization = org;
