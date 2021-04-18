@@ -43,12 +43,12 @@ export default Vue.extend({
   },
   methods: {
     storeOrg(org: string) {
-      if (process.browser) {
+      if ((process as any).browser) {
         localStorage.setItem("org", org);
       }
     },
     getStorageOrg() {
-      return process.browser && localStorage.getItem("org") ? localStorage.getItem("org") : "lemoncode";
+      return (process as any).browser && localStorage.getItem("org") ? localStorage.getItem("org") : "lemoncode";
     },
     async filterEmployees(org: string) {
       this.organization = org;
